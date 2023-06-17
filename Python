@@ -1,0 +1,18 @@
+def analyze_file(file_path):
+    line_count = 0
+    word_count = 0
+    character_count = 0
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            line_count += 1
+            words = line.split()
+            word_count += len(words)
+            character_count += len(line)
+
+    print("Total lines:", line_count)
+    print("Total words:", word_count)
+    print("Total characters:", character_count)
+
+file_path = 'example.txt'
+analyze_file(file_path)
